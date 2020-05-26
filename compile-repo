@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# Author: Patrick Muff <muff.pa@gmail.com>
+# Author: H0ud1nii, Core-X 
 # Purpose: Compiles a Cydia repository
 
 use Digest::MD5;
@@ -46,10 +46,10 @@ foreach (@files) {
  	my $fname = $_;
 	my $md5 = md5sum($fname);
 	my $size = -s $fname;
-	$output = $output.$md5." ".$size." ".$fname."\n"." "; # 每行末尾换行符后追加一个空格
+	$output = $output.$md5." ".$size." ".$fname."\n"." ";
 };
 
-print RLS " ".$output; # md5值前面预留一个空格
+print RLS " ".$output;
 close(RLS);
 
 # remove Release.gpg  
